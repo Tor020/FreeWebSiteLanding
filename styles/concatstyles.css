@@ -1,0 +1,56 @@
+/* 
+  CSS Grid Syntax
+  __________________________________________
+  | .grid-wrapper{display:grid;}
+  |
+  |  .grid-wrapper
+  |    | div
+  |    | div
+  |    | div
+  |  /.grid-wrapper
+  |__________________________________________
+  
+    __________________________________________
+  | rows        up and down    
+  | columns     left and right
+  |
+  | grid-auto-rows:minmax(100px, auto);           This dictates the size of each row                 
+  | grid-auto-columns:minmax(100px, auto);        This dictates the size of each column                    
+  |
+  | grid-column:1/3;                              will span from one to three columns to the right
+  | grid-row:1/3;                                 will span from one to three rows downward 
+  | 
+  | grid-column:3;                                will span from the start of the 3rd column
+  | grid-row:1/3;
+  | 
+  | grid-column:2/4;                              will span from two to four columns to the right
+  | grid-row:3;                                   will fit into the 3rd slot
+  |
+  | grid-column:1;                                
+  | grid-row:2/4;                                 spans from two to four
+  |_________________________________________
+
+  __________________________________________
+  |align-self:              justify-self:  
+  |align-items:             justify-items:  
+  |
+  |default:stretch | center | start | end 
+  |_________________________________________
+
+  __________________________________________
+  | fr is fraction the reccomended unit.
+  | 
+  | grid-template-columns:1fr 2fr 1fr;          
+  | grid-template-columns:repeat(3, 1fr, 2fr);    repeats 3 times __ 1-2, 1-2, 1-2 
+  |
+  | grid-auto-rows:minmax(100px, auto);           will stay at 100px but will automatically resize to accomodate large content
+  |
+  | grid-column-gap:1em; 
+  | grid-row-gap:1em;
+  | grid-gap:1em;                                 Spacing in between columns for both row and column
+  | 
+  |_________________________________________
+
+
+
+*/
