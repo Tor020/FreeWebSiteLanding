@@ -7,7 +7,12 @@ var margins = window.getComputedStyle(main).marginLeft;
 console.log(footer.style.cssText);
 console.log(footer);
 
-
+ window.addEventListener('resize', function (e) {
+  var margins = window.getComputedStyle(main).marginLeft;
+  Object.assign(footer.style,{paddingLeft:margins,paddingRight:margins});
+  console.log(footer.style.cssText);
+  
+});
 Object.assign(footer.style,{paddingLeft:margins,paddingRight:margins});
 
 

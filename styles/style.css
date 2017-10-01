@@ -8,7 +8,6 @@
   strong {
     color: #333;
   }
-
   html {
     background-color: #fff;
     font-size: 16px;
@@ -31,10 +30,11 @@
 
     display: grid;
     grid-auto-rows: minmax(50px, auto);
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
   }
   .nav-item {
+    padding:1em;
     text-align: center;
     color:white;
     border-bottom:1px solid transparent;
@@ -106,26 +106,46 @@
       grid-template-columns:1fr 1fr; 
       padding-top:3em;
       padding-bottom:3em;
-      grid-gap:2em;
+      grid-gap:1em;
   }
-    .footer1{
-      color:#fff;
-      margin:.5em 0 .5em 0;
+    .footer1 {
+      color: #fff;
+      margin: .5em 0 .5em 0;
+      min-width: 260px;
     }
-    .footer1>h1{color:#fff;}
-    .footer1>p{margin:.5em 0 .5em 0;}
-    p.day{margin:0;}  
-     h3.hrs{margin-bottom:0.5em;}
-     .footer-hours-div{
-       display:grid;
 
-      }     
-    .footer2{}
-    
+    .footer1>h1 {
+      color: #fff;
+    }
+
+    .footer1>p {
+      margin: .5em 0 .5em 0;
+    }
+
+    p.day {
+      margin: 0;
+    }
+
+    h3.hrs {
+      margin-bottom: 0.5em;
+    }
+
+    .footer-hours-div {
+      display: grid;
+    }
+
+    .footer2 {
+      display: none;
+    }
+
+    #gmap {
+      width: 250px;
+      height: 250px;
+    }
 /* Main Section Content */
   .main{
     margin:auto;
-    max-width: 50em;
+    max-width: 50%;
   }
   .main>h1{
     margin-top:2em;
@@ -145,6 +165,8 @@
   /* Larger than tablet  */
   @media (min-width: 550px) { 
 
+
+
     .header>h1{
       max-width:550px;
       margin:auto;
@@ -154,11 +176,16 @@
       padding-left:10%;
 
     }
-
+    
   }
 
   /* Larger than tablet */
-  @media (min-width: 750px) { }
+  @media (min-width: 750px) { 
+
+    .footer2{display:block;}
+    #gmap{height:250px;width:250px;}
+    
+  }
 
   /* Larger than desktop */
 
@@ -166,6 +193,7 @@
     .nav-grid {
       padding-left: 30%;
     }
+    #gmap{height:400px;width:400px;}
   }
 
   /* Larger than Desktop HD */
